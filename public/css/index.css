@@ -1,0 +1,114 @@
+body {
+    background: url('../imgs/haida.jpg');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    width: 1600px; 
+    height: 3000px;
+    background-color: #fff;
+}
+
+#app {
+    width: 800px;
+    height: 3000px;
+    margin: 0 auto;
+    overflow: hidden;
+    /* text-align: center; */
+}
+
+#app h1 {
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    margin: 40px auto;
+    line-height: 50px;
+}
+
+#searchBox {
+    width: 800px;
+    height: 180px;
+    margin-bottom: 20px;
+}
+
+
+/* #tableBox {
+            margin-top: 30px;
+        } */
+
+#tableBox table {
+    width: 600px;
+    margin: 30px auto;
+    border-collapse: collapse;
+}
+
+#tableBox th,
+#tableBox td {
+    border: 1px solid #111;
+    text-align: center;
+    width: 20%;
+    height: 50px;
+}
+
+#bookForm {
+    width: 600px;
+    margin: auto;
+}
+
+.nonename {
+    width: 380px;
+}
+
+.nonename span {
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 50px;
+}
+
+.nonename input {
+    border-style: none;
+    border: 2px solid skyblue;
+    outline: none;
+    width: 250px;
+    height: 30px;
+    font-size: 16px;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+#bookForm #bookAdd,
+#bookForm #bookSearch {
+    display: block;
+    margin: 10px 0 20px 40px;
+    width: 100px;
+    height: 50px;
+    background-color: red;
+    font-size: 20px;
+    line-height: 50px;
+    font-weight: 700;
+}
+
+input:disabled {
+    cursor: not-allowed;
+}

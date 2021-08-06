@@ -1,0 +1,9 @@
+{
+    "db": {
+        "title": "图书管理系统",
+        "port": "27017",
+        "user": "zhaofangyuan",
+        "host": "localhost",
+        "dataName": "books"
+    }
+}

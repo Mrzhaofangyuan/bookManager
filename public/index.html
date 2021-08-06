@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='./js/vue.js'></script>
+    <script src="./js/dateFormat.js"></script>
+    <script src="./js/ajax.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div id="app">
+        <div>
+            <h1>图书管理系统</h1>
+        </div>
+        <div id="searchBox">
+            <form action="" id="bookForm">
+                <div class='fl'>
+                    <div class='nonename'>
+                        <span>图书名称：</span>
+                        <span>
+                <input type="text" v-model='bookName' :disabled='flag' v-focus>
+                </span>
+                    </div>
+                    <div class='nonename'>
+                        <span>数量：</span>
+                        <span>
+                <input type="text" v-model='bookNum'>
+                </span>
+                    </div>
+                    <div class='nonename'><span>位置：</span>
+                        <span>
+                <input type="text" v-model='bookPosition'>
+                </span></div>
+                </div>
+                <div class='fl'>
+                    <input type="submit" id="bookSearch" value="查询" v-on:click.prevent='searchbook'>
+                    <input type="submit" id="bookAdd" value="添加" v-on:click.prevent='addBook'>
+                </div>
+
+            </form>
+        </div>
+        <div id="tableBox">
+            <table>
+                <thead>
+                    <tr>
+                        <th>图书名称</th>
+                        <th>图书余量</th>
+                        <th>修改时间</th>
+                        <th>库存位置</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr @key='index' v-for='(book,index) in books'>
+                        <td>{{book.name}}</td>
+                        <td>{{book.number}}</td>
+                        <td>{{book.inDate | dateFormat('yyyy-MM-dd hh:mm:ss')}}</td>
+                        <td>{{book.position}}</td>
+                        <td>
+                            <a href="" @click.prevent='modify_book(book)'>修改</a>
+                            <span>|</span>
+                            <a href="" @click.prevent='delete_book(book)'>删除</a>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="./js/book_function.js"></script>
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
